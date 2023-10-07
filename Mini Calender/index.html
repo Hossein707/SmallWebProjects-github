@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>MiniCalendar</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="calendar">
+            <div class="left">
+                <p id="date">01</p>
+                <p id="day">sunday</p>
+            </div>
+            <div class="right">
+                <p id="month">april</p>
+                <p id="year">2023</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        const date = document.getElementById("date");
+        const day = document.getElementById("day");
+        const month = document.getElementById("month");
+        const year = document.getElementById("year");
+
+        const today=new Date();
+
+       
+        date.innerHTML= ("0"+today.getDate()).slice(-2);
+        day.innerHTML=today.toLocaleString('default', { weekday: 'long' });
+        month.innerHTML= today.toLocaleString('default', { month: 'long' });
+        year.innerHTML=today.getFullYear();
+        
+    </script>
+</body>
+
+
+</html>

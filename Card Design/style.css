@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fbfafaa2;
+}
+
+/* background: linear-gradient(45deg, #08001f, #30197d); */
+section {
+    padding: 30px 50px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #000;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.water-card {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    box-shadow: inset 20px 20px 20px rgba(0, 0, 0, 0.05),
+        25px 35px 20px rgba(0, 0, 0, 0.05),
+        25px 30px 30px rgba(0, 0, 0, 0.05),
+        inset -20px -20px 25px rgba(255, 255, 255, 0.9);
+    transition: 0.5s ease-in-out;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    gap: 20px;
+}
+
+section .water-card:nth-child(1) {
+    border-radius: 41% 59% 54% 46% / 61% 43% 57% 39%;
+}
+
+section .water-card:nth-child(2) {
+    border-radius: 49% 51% 36% 64% / 49% 66% 34% 51%;
+}
+
+section .water-card:hover {
+    border-radius: 50%;
+}
+
+.water-card::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 85px;
+    height: 35px;
+    width: 35px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.9;
+}
+
+.water-card::after {
+    content: '';
+    position: absolute;
+    top: 60px;
+    left: 70px;
+    height: 15px;
+    width: 15px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.9;
+}
+
+.water-card h1 {
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.1),
+        inset -2px -5px 10px rgba(255, 255, 255, 1),
+        15px 15px 10px rgba(0, 0, 0, 0.05),
+        15px 10px 15px rgba(0, 0, 0, 0.025);
+}
+
+.water-card p {
+    line-height: 1.4;
+}
+
+section div:nth-child(1) h1 {
+    color: #ff0f5b;
+}
+
+section div:nth-child(2) h1 {
+    color: #01b4ff;
+}
+
+.water-card a {
+    text-decoration: none;
+    padding: 10px 25px;
+    color: #fff;
+    border-radius: 25px;
+    font-weight: 500;
+
+}
+
+section div:nth-child(1) a {
+    background: #ff0f5b;
+}
+
+section div:nth-child(2) a {
+    background: #01b4ff;
+}
+
+
+.product-card {
+    background: #361717;
+}
+
+.product-card .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.product-card .container .card {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+}
+
+.product-card .container .card .image {
+    height: 150px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    transition: 0.5s ease-in-out;
+
+}
+
+.product-card .container .image h2 {
+    color: #fff;
+}
+
+
+.product-card .container .card:hover .image {
+    transform: translateY(-100px);
+}
+
+.product-card .container .card .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0 0 20px;
+    transition: 0.5s ease-in-out;
+}
+
+.product-card .container .card:hover .image img {
+    transform: translate(-20px, -40px) rotate(-25deg) scale(1.4);
+}
+
+.product-card .container .card .content {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.product-card .container .card:hover .content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50px);
+}
+
+.product-card .container .card .content .size,
+.product-card .container .card .content .color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+}
+
+.product-card .container .card .content .size h3,
+.product-card .container .card .content .color h3 {
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+
+.product-card .container .card .content .size span {
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 24px;
+    display: inline-block;
+    color: #111;
+    background: #fff;
+    border-radius: 4px;
+    margin: 0 5px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.product-card .container .card .content .size span:hover {
+    background: #9bdc28;
+}
+
+.product-card .container .card .content .color span {
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-radius: 50%;
+    margin: 0 5px;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.product-card .container .card .content .color span:nth-child(2) {
+    background: green;
+}
+
+.product-card .container .card .content .color span:nth-child(3) {
+    background: yellow;
+}
+
+.product-card .container .card .content a {
+    position: relative;
+    top: 10px;
+    display: inline-block;
+    padding: 12px 30px;
+    background: #fff;
+    border-radius: 4px;
+    font-weight: 600;
+    color: #111;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+@media screen and (max-width:480px) {
+    section {
+        padding: 30px 10px;
+    }
+
+    .water-card {
+        width: 280px;
+        height: 280px;
+    }
+
+    .water-card h1 {
+        font-size: 15px;
+    }
+
+    .water-card p {
+        line-height: 1.2;
+    }
+
+    .water-card a {
+        font-size: 15px;
+        padding: 5px 15px;
+
+
+    }
+}

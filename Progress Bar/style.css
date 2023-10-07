@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(45deg, #08001f, #331a85) no-repeat;
+}
+
+.container {
+    color: #fff;
+    display: flex;
+    margin-top: 40px;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+
+}
+
+.progress-bar {
+    width: 160px;
+    height: 160px;
+    position: relative;
+}
+
+.progress-bar .outer {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    padding: 20px;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+        -6px -6px 10px -1px rgba(27, 4, 104, 0.667);
+}
+
+.progress-bar .outer .inner {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+        inset -4px -4px 6px -1px rgba(27, 4, 104, 0.667),
+        -0.5px -0.5px 0px rgba(27, 4, 104, 1),
+        0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+        0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#number {
+    font-weight: 600;
+    color: #fff;
+}
+
+circle {
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: anim 2s linear forwards;
+
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes anim {
+    100% {
+        stroke-dashoffset: 165;
+    }
+
+}
+
+
+
+.linear-progress-bars{
+    padding: 40px 0;
+}
+.linear-progress-bars h2{
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-top: 40px;
+    margin-bottom: 5px;
+    color: #fff;
+    font-size: 16px;
+}
+.linear-progress-bars .linear-progress-bar{
+    width: 600px;
+    background: rgba(253, 251, 253, 0.886);
+    box-shadow:inset 4px 4px 6px -1px rgba(0, 0, 0, 0.3),
+    inset -4px -4px 6px -1px rgba(37, 6, 137, 0.708);
+    height: 10px;
+    border-radius: 5px;
+}
+
+.linear-progress-bars .linear-progress-bar div{
+    height: 10px;
+    border-radius: 5px;
+    width: 0%;
+    position: relative;
+}
+
+.linear-progress-bars .linear-progress-bar div span{
+    height: 40px;
+    width: 40px;
+    line-height: 36px;
+    font-size: 15px;
+    border-radius: 50%;
+    background: #331a85;
+    position: absolute;
+    right: 0;
+    top: -15px;
+    text-align: center;
+}
+.linear-progress-bars .linear-progress-bar .html{
+    background: #e91e63;
+    animation: html 2s linear forwards;
+}
+.linear-progress-bars .linear-progress-bar .html span{
+    border:2px solid #e91e63;
+}
+.linear-progress-bars .linear-progress-bar .css{
+    background: #cddc39;
+    animation: css 2s linear forwards;
+}
+.linear-progress-bars .linear-progress-bar .css span{
+    border:2px solid #cddc39;
+}
+.linear-progress-bars .linear-progress-bar .javascript{
+    background: #00bcd4;
+    animation: javascript 2s linear forwards;
+}
+.linear-progress-bars .linear-progress-bar .javascript span{
+    border:2px solid #00bcd4;
+}
+
+@keyframes html{
+    100%{
+        width: 90%;
+    }
+}
+@keyframes css{
+    100%{
+        width: 95%;
+    }
+}
+@keyframes javascript{
+    100%{
+        width: 80%;
+    }
+}
